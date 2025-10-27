@@ -5,6 +5,7 @@ fun main() {
 
     val singles = mutableListOf<Single>()
     val album = Album(listOfSongs)
+    val recordPlayer = RecordPlayer()
 
 
 
@@ -15,4 +16,7 @@ fun main() {
     for (single in singles) {
         println(single.getPlayingTime())
     }
+
+    recordPlayer.play(album)
+    recordPlayer.play(Single(Song("Song", "Michael Jackson", 5.0), Song("Song", "Imagine Dragons", 2.5)))
 }
